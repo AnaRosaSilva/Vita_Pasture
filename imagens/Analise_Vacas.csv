@@ -1,0 +1,10 @@
+﻿Rótulos de Linha;Soma de Idas ao cocho (comer);Soma de Idas ao bebedouro (beber água)
+Vaca 1;2;20
+Baixa frequência de alimentação, pode indicar problema de saúde.;2;20
+Vaca 2;3;25
+Alta frequência de hidratação, deve ser avaliada por um veterinário.;3;25
+Vaca 3;5;15
+Comportamento alimentar equilibrado, produtiva.;5;15
+Vaca 4;2;10
+Baixa ingestão de alimentos, pode afetar a produtividade.;2;10
+Total Geral;12;70

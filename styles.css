@@ -1,0 +1,226 @@
+/* CSS para página_principal */
+
+/* Configuração geral */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: var(--text-color);
+    background-color: var(--bg-light);
+}
+
+:root {
+    --primary-color: #556B2F; /* Verde oliva */
+    --secondary-color: #3A4B2B; /* Verde oliva escuro */
+    --text-color: #000000; /* Preto */
+    --bg-color: #FFFFFF; /* Branco */
+    --bg-light: #F5F5F5; /* Branco suave */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    color: var(--bg-color);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+nav img {
+    height: 50px;
+}
+
+nav ul {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul a {
+    text-decoration: none;
+    color: var(--bg-color);
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+nav .btn {
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    border-radius: 5px;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+nav .btn:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Ícones do menu */
+.menu-icon, .close-icon {
+    display: none;
+    color: var(--bg-color);
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Estilização do banner */
+.banner {
+    text-align: center;
+    padding-top: 50px;
+}
+
+.banner-text h3 {
+    font-size: 48px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    background-color: var(--secondary-color);
+    color: var(--bg-color);
+}
+
+.banner-text p {
+    font-size: 20px;
+    margin: 10px 0;
+    color: var(--bg-color);
+}
+
+.banner .btn {
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.banner .btn:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        display: none;
+        background-color: var(--secondary-color);
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 200px;
+        text-align: center;
+    }
+
+    nav ul.open {
+        display: flex;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .close-icon {
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+}
+
+/* Seção faça-mais */
+.faca-mais {
+    padding: 50px 0;
+    background-color: var(--bg-color);
+    border-bottom: 1px solid #eaeaea;
+}
+
+.faca-mais:nth-child(even) {
+    background-color: var(--bg-light);
+}
+
+/* Texto */
+.faca-mais-text {
+    flex: 1 1 50%;
+    padding: 20px;
+}
+
+.faca-mais-text h3 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.faca-mais-text p {
+    font-size: 1rem;
+    color: var(--text-color);
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.faca-mais-text .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: var(--bg-color);
+    background-color: var(--primary-color);
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.faca-mais-text .btn:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Imagem */
+.faca-mais-img {
+    flex: 1 1 40%;
+    text-align: center;
+}
+
+.faca-mais-img img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .faca-mais-text, .faca-mais-img {
+        flex: 1 1 100%;
+        text-align: center;
+    }
+
+    .faca-mais-text h3 {
+        font-size: 1.5rem;
+    }
+
+    .faca-mais-text p {
+        font-size: 0.9rem;
+    }
+}

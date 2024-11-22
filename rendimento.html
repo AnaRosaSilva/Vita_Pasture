@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rendimento</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+     <!--- header -->
+     <header style="background-image: url(imagens/file-1.jpg);">
+        <!-- container -->
+        <div class="container">
+            <nav>
+                <a href="index.html">
+                    <img src="imagens/logo2.jpg" alt="Logo">
+                </a>
+                <ul class="ul">
+                    <a href="pagina_principal.html">Home</a>
+                    <a href="rastreabilidade.html">Rastreabilidade</a>
+                    <a href="saude.html">Saúde</a>
+                    <a href="rendimento.html">Rendimento</a>
+                    <a href="logout.php" style="text-decoration: none; padding: 10px 20px; background-color: #007BFF; color: white; border-radius: 5px; display: inline-block;">Sair</a>
+                </ul>
+            </nav>
+        </div>
+        <!-- end container -->
+    </header>
+    <!-- end header --> 
+    <!-- faça mais 1 -->
+    <section class="faca-mais">
+        <!-- container -->
+        <div class="container">
+            <div class="faca-mais-text">
+                
+                <canvas id="grafico" style="max-width: 600px;"></canvas>
+                <script>
+                    const ctx = document.getElementById('grafico').getContext('2d');
+                    new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: ['Vaca 1', 'Vaca 2', 'Vaca 3', 'Vaca 4'],
+                        datasets: [
+                        {
+                            label: 'Idas ao cocho (comer)',
+                            data: [2, 3, 5, 2],
+                            backgroundColor: 'rgba(54, 162, 235, 0.7)'
+                        },
+                        {
+                            label: 'Idas ao bebedouro (beber água)',
+                            data: [20, 25, 15, 10],
+                            backgroundColor: 'rgba(255, 99, 132, 0.7)'
+                        }
+                        ]
+                    },
+                    options: {
+                        responsive: true,
+                        plugins: {
+                        legend: { position: 'top' },
+                        title: { display: true, text: 'Gráfico de Idas ao Cocho e Bebedouro' }
+                        }
+                    }
+                    });
+                </script>
+            </div>
+        </div>
+       <!-- end container -->
+    </section>
+    <!-- end faça mais 1 -->
+</body>
+
+</html>
